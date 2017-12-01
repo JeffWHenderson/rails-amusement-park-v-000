@@ -24,6 +24,9 @@ class AttractionsController < ApplicationController
 
   def edit
   end
+
+  def update
+  end
   
   def ride
     @ride = Ride.create(user_id: params[:user_id], attraction_id: params[:attraction_id])
