@@ -1,5 +1,13 @@
 YOure tearing me apart lisa
 
 <%= form_for @attraction do |f| %>
-  <%= f.label :attraction %>
+  <%= f.label :name %>
+  <%= f.textfield :name %>
+  
 <% end %>
+
+t.string  "name"
+t.integer "tickets"
+t.integer "nausea_rating"
+t.integer "happiness_rating"
+t.integer "min_height"
