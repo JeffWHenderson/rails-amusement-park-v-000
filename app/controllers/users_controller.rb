@@ -17,11 +17,12 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find_by(params[:id])
     if session[:user_id]
       #raise User.find(params[:id]).inspect
       @user = User.find_by(params[:id])
       raise user_path.inspect
-      redirect_to user_path @user
+      #render user_path @user
       #puts @user.admin
     else
       redirect_to root_path
