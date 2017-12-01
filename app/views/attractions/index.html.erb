@@ -2,4 +2,4 @@
 <%= link_to "Go on #{a.name}", a %><br>
 <% end %>
 
-<%= link_to "New Attraction", 'alkhsd' if @user.admin %>
+<%= link_to "New Attraction", new_attraction_path if @user.admin %>
