@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root "welcome#home"
   #get "/users/new", to: 'users#new'
   get '/signin', to: 'sessions#new'
+  get '/signout', to: 'sessions#destroy'
   resources :users
   resources :attractions
   resources :sessions, only: [:create, :destroy]
