@@ -9,5 +9,6 @@ class AttractionsController < ApplicationController
   end
 
   def ride
+    raise params.inspect
   end
 end
