@@ -12,6 +12,10 @@ class AttractionsController < ApplicationController
   def new
     @attraction = Attraction.new
   end
+
+  def create
+    raise params.inspect
+  end
   
   def ride
     @ride = Ride.create(user_id: params[:user_id], attraction_id: params[:attraction_id])
