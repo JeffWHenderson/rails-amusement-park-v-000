@@ -11,6 +11,7 @@ class AttractionsController < ApplicationController
 
   def new
   end
+  
   def ride
     @ride = Ride.create(user_id: params[:user_id], attraction_id: params[:attraction_id])
     #@ride.take_ride
