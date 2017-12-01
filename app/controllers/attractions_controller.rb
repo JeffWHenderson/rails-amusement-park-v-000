@@ -14,7 +14,7 @@ class AttractionsController < ApplicationController
   end
 
   def create
-    raise attraction_params(params).inspect
+    raise attraction_params(:name, :height).inspect
     @attraction = Attraction.new(attraction_params(params))
   end
   
