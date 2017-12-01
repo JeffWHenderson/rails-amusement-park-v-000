@@ -15,7 +15,11 @@ class AttractionsController < ApplicationController
 
   def create
     @attraction = Attraction.new(attraction_params(:name, :tickets, :nausea_rating, :happiness_rating, :min_height))
-    raise @attraction.inspect
+    if @attraction.save
+      redirect_to attraction_path @attraction
+    else
+      redirect_to root_path
+    end
   end
   
   def ride
