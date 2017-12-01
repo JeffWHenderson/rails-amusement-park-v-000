@@ -1,3 +1,9 @@
 
 <%= @user.name %>
 <%= @attraction.name %>
+
+<%= form_tag(rides_path) %>
+  <%= hidden_field_tag :attraction_id %>
+  <%= hidden_field_tag :user_id %>
+  <%= submit_tag "Go on this ride" %>
+<% end %>
