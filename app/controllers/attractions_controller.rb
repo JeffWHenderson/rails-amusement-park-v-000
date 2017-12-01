@@ -11,7 +11,6 @@ class AttractionsController < ApplicationController
   def ride
     @ride = Ride.create(user_id: params[:user_id], attraction_id: params[:attraction_id])
     flash[:notice] = @ride.take_ride
-    raise @ride.user.inspect
     redirect_to user_path(@ride.user)
   end
 end
