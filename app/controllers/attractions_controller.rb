@@ -27,6 +27,8 @@ class AttractionsController < ApplicationController
   end
 
   def update
+    @attraction = Attraction.find(params[:id])
+    @attraction.update(attraction_params(:name, :tickets, :nausea_rating, :happiness_rating, :min_height))
   end
   
   def ride
