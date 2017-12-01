@@ -20,6 +20,7 @@ class UsersController < ApplicationController
     if session[:user_id]
       #raise User.find(params[:id]).inspect
       @user = User.find_by(params[:id])
+      raise user_path.inspect
       redirect_to user_path @user
       #puts @user.admin
     else
