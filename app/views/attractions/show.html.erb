@@ -3,7 +3,7 @@
 <%= @attraction.name %>
 
 <%= form_tag('/ride') do %>
-  <%= hidden_field_tag :"#{@user.id}" %>
+  <%= text_field_tag :"#{@user.id}" %>
   <%= hidden_field_tag :user_id %>
   <%= submit_tag "Go on this ride" %>
 <% end %>
