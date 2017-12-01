@@ -20,7 +20,7 @@ class UsersController < ApplicationController
     @user = User.find_by(params[:id])
     if session[:user_id]
       #raise User.find(params[:id]).inspect
-      @user = User.find_by(params[:id])
+      @user = User.find(params[:id])
       #raise user_path.inspect
       #render user_path @user
       #puts @user.admin
