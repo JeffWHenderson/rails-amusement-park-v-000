@@ -21,7 +21,7 @@ class UsersController < ApplicationController
       #raise User.find(params[:id]).inspect
       @user = User.find_by(params[:id])
       redirect_to user_path @user
-      puts @user.admin
+      #puts @user.admin
     else
       redirect_to root_path
     end
