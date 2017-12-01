@@ -24,4 +24,10 @@ class AttractionsController < ApplicationController
     flash[:notice] = @ride.take_ride
     redirect_to user_path(@ride.user)
   end
+
+  private
+
+  def attraction_params(*args)
+    params.require(:attraction).permit(*args)
+  end
 end
