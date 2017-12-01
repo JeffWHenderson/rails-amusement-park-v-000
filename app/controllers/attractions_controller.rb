@@ -4,5 +4,7 @@ class AttractionsController < ApplicationController
   end
 
   def show
+    @user = session[:user_id]
+    @attraction = Attraction.find(params[:id])
   end
 end
