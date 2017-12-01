@@ -14,8 +14,7 @@ class AttractionsController < ApplicationController
   end
 
   def create
-    raise attraction_params(:name, :tickets, :nausea_rating, :happiness_rating, :min_height).inspect
-    @attraction = Attraction.new(attraction_params(params))
+    @attraction = Attraction.new(attraction_params(:name, :tickets, :nausea_rating, :happiness_rating, :min_height))
   end
   
   def ride
