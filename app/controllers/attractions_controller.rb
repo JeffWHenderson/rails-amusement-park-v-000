@@ -21,6 +21,9 @@ class AttractionsController < ApplicationController
       redirect_to root_path
     end
   end
+
+  def edit
+  end
   
   def ride
     @ride = Ride.create(user_id: params[:user_id], attraction_id: params[:attraction_id])
