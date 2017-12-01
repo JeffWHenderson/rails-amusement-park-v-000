@@ -3,6 +3,7 @@
 <% end %>
 
 <%= link_to "New Attraction", new_attraction_path if @user.admin %>
+
 <% @attractions.each do |a| %>
 <%= link_to "Show #{a.name}", a %><br>
 <% end %>
