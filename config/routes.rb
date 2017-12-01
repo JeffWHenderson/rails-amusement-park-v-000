@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   #get "/users/new", to: 'users#new'
   get '/signin', to: 'sessions#new'
   get '/signout', to: 'sessions#destroy'
+  post '/ride', to: 'attractions#ride'
   resources :users
   resources :attractions
   resources :sessions, only: [:create, :destroy]
