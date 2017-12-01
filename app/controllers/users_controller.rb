@@ -18,6 +18,7 @@ class UsersController < ApplicationController
 
   def show
     if session[:user_id]
+      raise params.inspect
       @user = User.find_by(params[:id])
       puts @user.admin
     else
