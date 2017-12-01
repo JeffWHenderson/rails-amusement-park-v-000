@@ -15,7 +15,7 @@ class AttractionsController < ApplicationController
 
   def create
     @attraction = Attraction.new(name: params[attraction][:name])
-    raise params.inspect
+    raise @attraction.inspect
   end
   
   def ride
